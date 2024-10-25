@@ -1,0 +1,39 @@
+
+// table creataion 
+
+CREATE TABLE salesman 
+(
+    salesman_id int PRIMARY KEY ,
+    name varchar(10) ,
+    city varchar(10) ,
+    commission double(3,2)
+) ;
+
+
+// value insert in the table 
+
+INSERT INTO customer (id, name, city, amount)
+VALUES
+    (5001, 'James Hoog', 'New York', 0.15),
+    (5002, 'Nail Knite', 'Paris', 0.13),
+    (5005, 'Pit Alex', 'London', 0.11),
+    (5006, 'Mc Lyon', 'Paris', 0.14),
+    (5007, 'Paul Adam', 'Rome', 0.13),
+    (5003, 'Lauson Hen', 'San Jose', 0.12);
+
+
+-----------------------------------------------------------------------------------------
+					QUESTIONS 
+-----------------------------------------------------------------------------------------
+
+1) write a SQL query to find salespeople who receive commissions between 0.12 and 0.14 (begin and end values are included). 
+Ans :   SELECT * FROM salesman
+	WHERE commission BETWEEN 0.12 AND 0.14 ;
+
+2) write a  SQL query to select orders between 500 and 4000 (begin and end values are included). Exclude orders amount 948.50 and 1983.43.
+Ans :   SELECT * FROM orders
+	WHERE (amount BETWEEN 500 AND 4000) AND (amount NOT IN (1983.43 , 948.50) ) ;
+
+3) write a  SQL query to retrieve the details of the salesman whose names begins with the letter 'B'.
+Ans :  SELECT * FROM salesman
+	WHERE name LIKE 'M%' ;

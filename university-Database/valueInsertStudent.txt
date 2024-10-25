@@ -1,0 +1,9 @@
+INSERT INTO people (id, name, DOB)
+ VALUES (101, 'Rahim Ahmed', '1990-03-15'),
+		(102, 'Fatema Khan', '1988-07-22'),
+		(103, 'Shakib Al Hasan', '1987-03-24'),
+		(104, 'Maya Noor', '1995-01-30'),
+		(105, 'Sultana Begum', '1992-11-05'),
+		(106, 'Anwar Hossain', '1985-04-18'),
+		(107, 'Nabila Rahman', '1978-10-25'),
+		(108, 'Zahid Hasan', '1993-09-14');

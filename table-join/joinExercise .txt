@@ -1,0 +1,25 @@
+ 
+table needed : Salesman , customer , orders which i made in the other folder . 
+
+-----------------------------------------------
+		QUESTION 
+-----------------------------------------------
+
+1) write a SQL query to find salespeople who received commissions of more than 12 percent from the company. Return Customer Name, customer city, Salesman, commission.  
+Ans : SELECT s.name AS salesman_name , s.salesman_id , s.city 
+	FROM salesman AS s INNER JOIN orders AS o 
+	ON s.salesman_id = o.salesmanId AND
+	s.commission >= 0.12 ;
+
+2) write a SQL query to locate those salespeople who do not live in the same city where their customers live and have received a commission of more than 12% from the company. 
+Ans : SELECT s.salesman_id , s.city , s.commission
+	FROM salesman AS s CROSS JOIN customer AS c 
+	WHERE s.city <> c.city AND 
+	s.commission > 0.12 ;
+
+3) write a SQL query to find those customers with a grade greater than 200.The result should be ordered by ascending customer_id. 
+Ans : SELECT  c.customerId , c.customerName , c.grade 
+	FROM salesman AS s CROSS JOIN customer AS c 
+	WHERE s.city <> c.city AND 
+	c.grade > 200 
+        ORDER BY c.customerId ASC;

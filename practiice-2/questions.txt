@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------------------
+					QUESTIONS 
+-----------------------------------------------------------------------------------------
+
+1) write a  SQL query to find the salespeople and customers who live in the same city.
+Ans : SELECT s.name AS Salsman , c.customerName , s.city
+	FROM salesman AS s , customer AS c 
+	WHERE s.city=c.city ;
+
+2)  write a  SQL query to find those salespeople who generated orders for their customers but are not located in the same city. 
+Ans : SELECT o.orderNo , s.salesman_id , c.customerId ,c.customerName
+	FROM orders AS o , salesman AS s , customer AS c 
+	WHERE s.city != c.city AND
+	  O.salesmanId = S.salesman_id AND
+    	  o.customerId = c.customerId ;
+
+
+3) write a SQL query to find those customers who are served by a salesperson and the salesperson earns commission in the range of 12% to 14% .
+Ans : SELECT c.customerName , c.city
+	FROM salesman AS s , customer AS c
+	WHERE c.salesmanId = s.salesman_id AND
+	s.commission BETWEEN 0.12 AND 0.14 ;
+	

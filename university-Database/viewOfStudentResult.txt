@@ -1,0 +1,4 @@
+
+CREATE VIEW view1 AS
+SELECT s.id , r.GPA 
+FROM student as s , result AS r ;

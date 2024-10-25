@@ -1,0 +1,5 @@
+SET @x:=0 ;
+SELECT * , @x:=@x+1 AS serial FROM student ;
+
+
+// @x is a local variable .

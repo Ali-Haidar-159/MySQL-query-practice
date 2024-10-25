@@ -1,0 +1,44 @@
+// table creation : 
+
+CREATE TABLE customer
+(
+	customerId int PRIMARY KEY ,
+    customerName varchar(10) ,
+    city varchar (10) ,
+    grade double (5,2) ,
+    salesmanId int 
+); 
+
+
+// insert values : 
+
+INSERT INTO customer
+VALUES
+    (3002, 'Nick Rimando', 'New York', 100, 5001),
+    (3007, 'Brad Davis', 'New York', 200, 5001),
+    (3005, 'Graham Zusi', 'California', 200, 5002),
+    (3008, 'Julian Green', 'London', 300, 5002),
+    (3004, 'Fabian Johnson', 'Paris', 300, 5006),
+    (3009, 'Geoff Cameron', 'Berlin', 100, 5003),
+    (3003, 'Jozy Altidore', 'Moscow', 200, 5007),
+    (3001, 'Brad Guzan', 'London', NULL, 5005);  -- Use NULL for missing value
+
+
+
+-----------------------------------------------------------------------------------
+				QUESTIONS 
+-----------------------------------------------------------------------------------
+
+1)  write a SQL query to find all the customers who have a grade value above 100. Return customer_id, cust_name, city, grade, and salesman_id .
+Ans :  SELECT * FROM customer 
+	WHERE grade>100 ;
+
+2) write a SQL query to find all the customers in ‘New York’ city who have a grade value above 100. Return customer_id, cust_name, city, grade, and salesman_id .
+Ans : SELECT * FROM customer 
+	WHERE grade>100 AND city='New York' ;
+
+
+
+
+
+

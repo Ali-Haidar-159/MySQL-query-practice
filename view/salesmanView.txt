@@ -1,0 +1,23 @@
+View :
+ 
+*** view is a virtual table which does not allocate memory in database like a table .
+*** view is very impotant for security and simplify complex sql queries .
+
+
+---------------------------------------------------------------------
+			QUESTION
+---------------------------------------------------------------------
+
+
+1)  From the following table, create a view for those salespeople who belong to the city of New York.
+Ans : CREATE VIEW salesman_view AS 
+	SELECT s.salesman_id AS Id , s.name 
+	FROM salesman AS s
+	WHERE s.city = 'New York' ;
+
+
+2) From the following table, create a view to count the number of salespeople in each city. Return city, number of salespersons.
+Ans : CREATE VIEW salesman_count AS 
+	SELECT s.salesman_id AS Id , s.city , COUNT(DISTINCT s.salesman_id) AS serial
+	FROM salesman AS s
+	GROUP BY 1 , 2;
